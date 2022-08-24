@@ -1,12 +1,44 @@
 const AGREGAR = document.getElementById("agregar");
-const lista = [];
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
     AGREGAR.addEventListener("click", ()=>{
         let item = document.getElementById("item").value;
+        let lista = document.getElementById("contenedor");
         
+        agregarLocalStorage(item);
+        lista.innerHTML += `<li>${item}</li>`;
+    });
+});
 
 
-    })
-})
+
+
+function agregarLocalStorage(parametro){
+    if (localStorage.getItem("array") === null){
+        localStorage.setItem("array", JSON.stringify([parametro]));
+    }else{
+        let array = JSON.parse(localStorage.getItem("array"));
+        console.log(localStorage.getItem("array"));
+        console.log(array);
+        array.push(parametro);
+        localStorage.setItem("array", JSON.stringify(array));
+    }
+}
+limpiar.addEventListener("click", ()=>{
+    limpiarItems();
+});
+
+function limpiarItems(){
+    console.log("asdasd");
+    let item = document.getElementById("item").value;
+    let lista = document.getElementById("contenedor");
+    /*
+    localStorage.setItem("array", "");
+
+    for(let item of lista){
+        item.remove();
+    }*/
+    lista.innerHTML = "";
+}
+
