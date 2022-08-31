@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizar();
     AGREGAR.addEventListener("click", () => {
         let item = document.getElementById("item").value;
-        agregarLocalStorage(item);
+        agregarLocalStorage(item.trim()); //  trim( ) elimina los espacios en blanco en ambos extremos del string
         actualizar();
     });
 });
