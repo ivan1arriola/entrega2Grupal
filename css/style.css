@@ -10,4 +10,12 @@
     height: 200px;
   }
 
-  
+  li {
+    border: 1px solid rgb(77, 69, 69);
+    color: #000;
+    background: #fff;
+    margin: 1px;
+    padding: 3px;
+    text-align: center;
+    overflow: hidden;
+  }
