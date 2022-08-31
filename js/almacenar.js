@@ -22,7 +22,9 @@ function actualizar() {
 }
 
 function agregarLocalStorage(parametro) {
-    if (parametro != "") {
+    if (parametro === "") {
+    }
+    else{
 
         if (localStorage.getItem("array") === null) {
             localStorage.setItem("array", JSON.stringify([parametro]));
@@ -31,6 +33,8 @@ function agregarLocalStorage(parametro) {
             array.push(parametro);
             localStorage.setItem("array", JSON.stringify(array));
         }
+
+
     }
 }
 limpiar.addEventListener("click", () => {
