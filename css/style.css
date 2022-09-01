@@ -13,10 +13,11 @@
   li {
     border: 1px solid rgb(77, 69, 69);
     color: #000;
-    background: #fff;
+    background: rgba(236, 216, 159, 0.685);
     margin: 1px;
     padding: 3px;
     text-align: center;
     overflow: hidden;
     word-wrap: break-word;
+    border-radius: 4px;
   }
